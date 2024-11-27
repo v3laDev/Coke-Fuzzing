@@ -70,4 +70,4 @@ For any questions or suggestions, feel free to reach out to the repository owner
 ---
 
 Thank you for using Coke Fuzzing! We hope it serves as a valuable tool in your web security arsenal.
-![Example](images/example.png)
+![Example]([images/example.png](https://github.com/v3laDev/Coke-Fuzzing/blob/main/images/example.PNG))
