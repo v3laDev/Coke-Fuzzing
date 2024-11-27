@@ -25,10 +25,15 @@ def find_subdomains(domain, subdomains, delay, log_file=None):
     for subdomain in subdomains:
         url = f"http://{subdomain}.{domain}"
         try:
+            print(f"Trying URL: {url}")
             requests.get(url)
             print(f"Subdomain found: {url}")
             if log_file:
                 log_file.write(f"Subdomain found: {url}\n")
+        except requests.exceptions.InvalidURL:
+            print(f"Invalid URL: {url}")
+            if log_file:
+                log_file.write(f"Invalid URL: {url}\n")
         except requests.ConnectionError:
             pass
         sleep(delay)
